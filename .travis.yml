@@ -40,12 +40,12 @@ before_install:
 install:
   - npm install
 script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
   - chmod +x mvnw
   - ./mvnw -ntp checkstyle:check
   - ./mvnw -ntp clean verify
   - ./mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='run test' -Dmaven.repo.local=$MAVEN_USER_HOME
   - ./mvnw -ntp verify -Pprod -DskipTests
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
@@ -55,4 +55,5 @@ addons:
   sonarcloud:
     organization: 'fhvmaster'
     token:
-      secure: 'PDSftwWdrijiGevXdQors3+JFrJBz+wngHgv2pmYsLRdPx4qA+3mRE0AkAAThCLMlWauvv6tB6Zue1NhBE4Z64VNDJSbo20ej9C7eDoiaTj0r4G9/fdVUe7S5N9oX2wb/QUjZqOOox5AqwqRWVoaNFWOBoGsSe0nul+csO10WSqCk51DYE9mNfH0L8g7j/BfaXLQECYcPFMUQmNQUphuhfsFXrSM4sifmxlz45HWdoXOK3dN+MsFsKE/Ik4NDAvRa2dFeagc+QYeOoxaPSLsaXiYkgRYMw2VsU9wPcCrPT9UuUGEUOTyRO5RrAD78fWBhIDieacUX92mpNcCKPkywkglFH7Qwjqm2TplPdX+KvzCjTE+qR2H8dtOrq47FJjLFJJYkCXccy3GXSmhd0g9ElvJzZcxDolcz/tDi2kxcNCDKOY7DXFL9HC6ruQP316MN/5R5mThfyZmfIloOV+2uIe2RmLgZCocsxLVDW3upurz+1in4eTgB1bPzkbiyUU/Mkh/HDz1RcOT0+4+wforWae/W5vghjcUBuQ3adcVw5eU8fQ9xrZ/zKZIhcA/2wr8m5PPCsMQtaedrDfUi6MhreoEVShLIugprHIqSJXml2KL8lLAG6+BuMYF//xprYS6ebccRnUxULI7UYG/TJau2DIQYU+JOsdhXb/J6UThUHg=' # encrypted value of your token
+      secure: 'BGaar7ZbEPekS9xci82o6CVA/f2o6/1K1829WGZ+aHnA96vJlE/pq43kDlmLYBhBOGfnSN+kU3EYoBA9jqbSk9aU/+INi4qxxA9UmVwFwKh+YouNvo1UgtMMCzxyX6rN3OU0a6knMGG5QvjE6PWnxNgRrXVQw36Y0vGK4CDoGRnWzx88Q3OnaUbpV3mmhvDX4WKCUrWDHMbmefa69Erzu0anw/lXZFftDt2TNBwXShn5zZRwbfjQEkFvV/cpKCMLzIUWF7394IS7x9e95/zmzzEcRaEbQ3nsOgHbQBnzJjcho1IOsnaR6pYPghRc9jWH6CXfCxTYOf+ba1eP6HRiCsAjDMeeD6BH+DocfPGyx/WArRRN7yE/Ps3GlhzT0r392nUCtP+D/zCA8wgGYq5AJYU5Sw+RT57QZzKN/GizJlwsZD+6eMWkbaK0Y2OjJfYsezgUYQQ+YREpsz1AYHhAvL3I5PxdDnMI+IF8yAKoVYluMY86xCNEUIPmOoyXTHUCWtMq1S3wJH9ywiesXHIgiU2sgm1DGuf/NLbbRZghLssZNp9WT0JrharKYveYn9kCBe4DCCBJ3SsyrLv3RGCiEZQOfWaq5z9QD0udckNjDCt2TuxuZMdmeks8upuLAWe5qGkmGVcTH23q0GmyFZxPqZkhsExT6MTc8xyAbe69Qso='
+  # encrypted value of your token
