@@ -40,7 +40,7 @@ before_install:
 install:
   - npm install
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=fhvmaster_club-master
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=fhvmaster_club-master -Dsonar.login=BGaar7ZbEPekS9xci82o6CVA/f2o6/1K1829WGZ+aHnA96vJlE/pq43kDlmLYBhBOGfnSN+kU3EYoBA9jqbSk9aU/+INi4qxxA9UmVwFwKh+YouNvo1UgtMMCzxyX6rN3OU0a6knMGG5QvjE6PWnxNgRrXVQw36Y0vGK4CDoGRnWzx88Q3OnaUbpV3mmhvDX4WKCUrWDHMbmefa69Erzu0anw/lXZFftDt2TNBwXShn5zZRwbfjQEkFvV/cpKCMLzIUWF7394IS7x9e95/zmzzEcRaEbQ3nsOgHbQBnzJjcho1IOsnaR6pYPghRc9jWH6CXfCxTYOf+ba1eP6HRiCsAjDMeeD6BH+DocfPGyx/WArRRN7yE/Ps3GlhzT0r392nUCtP+D/zCA8wgGYq5AJYU5Sw+RT57QZzKN/GizJlwsZD+6eMWkbaK0Y2OjJfYsezgUYQQ+YREpsz1AYHhAvL3I5PxdDnMI+IF8yAKoVYluMY86xCNEUIPmOoyXTHUCWtMq1S3wJH9ywiesXHIgiU2sgm1DGuf/NLbbRZghLssZNp9WT0JrharKYveYn9kCBe4DCCBJ3SsyrLv3RGCiEZQOfWaq5z9QD0udckNjDCt2TuxuZMdmeks8upuLAWe5qGkmGVcTH23q0GmyFZxPqZkhsExT6MTc8xyAbe69Qso=
   - chmod +x mvnw
   - ./mvnw -ntp checkstyle:check
   - ./mvnw -ntp clean verify
