@@ -1,0 +1,10 @@
+{
+  "clubMasterApp": {
+    "ClubType": {
+      "null": "",
+      "SPORT": "SPORT",
+      "MUSIC": "MUSIC",
+      "GAMING": "GAMING"
+    }
+  }
+}
